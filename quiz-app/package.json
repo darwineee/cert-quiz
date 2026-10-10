@@ -1,0 +1,14 @@
+{
+  "name": "aws-cert-practice",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "npx serve public"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "dotenv": "^18.0.7"
+  }
+}

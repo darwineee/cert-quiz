@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam | AWS Cert Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display:flex; align-items:center; gap: 1rem;">
+      <div id="exam-title" style="font-weight: 600;">Loading...</div>
+      <div id="save-status" style="font-size: 0.8rem; color: var(--text-secondary);"></div>
+    </div>
+    <div style="display:flex; align-items:center; gap: 1.5rem;">
+      <div id="timer" class="timer hidden">00:00:00</div>
+      <button id="save-btn" class="secondary" style="padding: 0.25rem 0.75rem; font-size:0.9rem;">Save & Exit</button>
+      <button id="submit-btn" style="padding: 0.25rem 0.75rem; font-size:0.9rem;">Submit Exam</button>
+    </div>
+  </div>
+
+  <main style="padding-bottom: 100px;">
+    <div id="question-header" style="display:flex; justify-content:space-between; margin-bottom: 1rem; color:var(--text-secondary); font-size: 0.9rem;">
+      <span id="q-number">Question 1 of 65</span>
+      <span id="q-section">Section</span>
+    </div>
+
+    <div id="stem" class="stem" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 1.5rem;"></div>
+
+    <div id="options-container" class="options-list">
+      <!-- Options rendered here -->
+    </div>
+
+    <div style="margin-top: 1.5rem;">
+      <button id="show-answer-btn" class="secondary hidden">Show Answer</button>
+    </div>
+
+    <div id="explanation-panel" class="explanation hidden">
+      <!-- Explanation rendered here -->
+    </div>
+  </main>
+
+  <div class="bottom-bar">
+    <button id="prev-btn" class="secondary">&larr; Back</button>
+    <div id="navigator" class="navigator">
+      <!-- Dots rendered here -->
+    </div>
+    <button id="next-btn">Next &rarr;</button>
+  </div>
+
+  <div id="toast">Saved ✓</div>
+
+  <script type="module" src="js/exam-engine.js"></script>
+</body>
+</html>
+

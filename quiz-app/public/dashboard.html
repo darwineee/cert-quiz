@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | AWS Cert Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">AWS Cert Practice</div>
+    <div>
+      <span id="user-email" style="margin-right: 1rem; color: var(--text-secondary);"></span>
+      <button id="logout-btn" class="secondary">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="resume-section" class="hidden">
+      <h3 style="margin-bottom: 1rem; color: var(--salmon);">⚡ Resume In-Progress Exams</h3>
+      <div id="resume-list"></div>
+    </section>
+
+    <section id="cert-section" style="margin-top: 2rem;">
+      <h3 style="margin-bottom: 1rem;">🎯 Select Certification</h3>
+      <div id="cert-list" class="grid">Loading...</div>
+    </section>
+
+    <section id="set-section" class="hidden" style="margin-top: 2rem;">
+      <h3 style="margin-bottom: 1rem;">📦 Select Exam Set</h3>
+      <div id="set-list" class="grid"></div>
+    </section>
+
+    <section id="exam-section" class="hidden" style="margin-top: 2rem;">
+      <h3 style="margin-bottom: 1rem;">📝 Select Exam</h3>
+      <div id="exam-list" class="grid"></div>
+    </section>
+  </main>
+
+  <div id="pre-exam-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3 id="modal-exam-name" style="margin-bottom: 1.5rem;">Start Exam</h3>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="modal-shuffle"> Shuffle Questions
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="modal-timer" checked> Enable Timer
+        </label>
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap: 1rem; margin-top: 2rem;">
+        <button id="modal-cancel" class="secondary">Cancel</button>
+        <button id="modal-start">Start Exam</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
+

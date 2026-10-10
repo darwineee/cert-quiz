@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Cert Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+    <div class="card" style="width: 100%; max-width: 400px;">
+      <h2 style="text-align:center; color:var(--salmon); margin-bottom:1.5rem;">AWS Cert Practice</h2>
+      <form id="auth-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" id="submit-btn" style="width: 100%; margin-top: 1rem;">Login</button>
+      </form>
+      <div style="text-align:center; margin-top: 1rem;">
+        <a href="#" id="toggle-mode">Need an account? Sign Up</a>
+      </div>
+      <div id="error-msg" style="color:var(--incorrect); margin-top:1rem; text-align:center; font-size:0.9rem;"></div>
+    </div>
+  </main>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
+

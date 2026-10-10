@@ -1,0 +1,8 @@
+.venv
+quiz-app/node_modules
+quiz-app/dist
+quiz-app/.env
+quiz-app/.env.local
+scratch
+scripts/
+datasrc/
