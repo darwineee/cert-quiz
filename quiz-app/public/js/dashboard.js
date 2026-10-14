@@ -8,7 +8,7 @@ async function init() {
   if (!currentUser) return;
 
   document.getElementById('user-email').textContent = currentUser.email;
-  document.getElementById('welcome-name').textContent = currentUser.email ? `, ${currentUser.email.split('@')[0]}` : '';
+  // document.getElementById('welcome-name').textContent = currentUser.email ? `, ${currentUser.email.split('@')[0]}` : '';
   
   document.getElementById('logout-btn').addEventListener('click', async () => {
     await supabase.auth.signOut();
