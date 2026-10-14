@@ -152,11 +152,6 @@ function renderQuestion() {
     stemHtml = state.highlights[q.id].stem;
   } else {
     stemHtml = q.stem_html || `<p>${q.stem}</p>`;
-    if (q.image_urls && q.image_urls.length > 0) {
-      q.image_urls.forEach(url => {
-        if (!stemHtml.includes(url)) stemHtml += `<br/><img src="${url}" />`;
-      });
-    }
   }
   document.getElementById('stem').innerHTML = stemHtml;
 
@@ -514,4 +509,3 @@ async function completeExam() {
 }
 
 init();
-
