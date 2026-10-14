@@ -96,6 +96,12 @@ async function init() {
     hlBtn.addEventListener('mousedown', (e) => e.preventDefault());
     hlBtn.addEventListener('click', toggleHighlight);
   }
+  document.addEventListener('keydown', (event) => {
+    if (event.altKey && event.code === 'KeyJ' && !event.ctrlKey && !event.metaKey) {
+      event.preventDefault();
+      toggleHighlight();
+    }
+  });
 
   // Track selection for mobile / tap resilience
   document.addEventListener('selectionchange', () => {
