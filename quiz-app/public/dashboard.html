@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | AWS Cert Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+  <header>
+    <div class="brand">AWS Cert Practice</div>
+    <div>
+      <span id="user-email" style="margin-right: 1rem; color: var(--text-secondary);"></span>
+      <button id="logout-btn" class="secondary">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard-intro">
+      <div>
+        <p class="eyebrow">AWS certification practice</p>
+        <h1>Welcome back<span id="welcome-name"></span></h1>
+        <p class="intro-copy">Choose an exam, keep your momentum, and review your progress.</p>
+      </div>
+      <div class="dashboard-actions">
+        <span id="user-email" class="user-email"></span>
+        <button id="logout-btn" class="secondary">Log out</button>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Your progress">
+      <div class="stat-card"><span class="stat-label">Completed</span><strong id="stat-completed">—</strong><span class="stat-hint">exams</span></div>
+      <div class="stat-card"><span class="stat-label">Average score</span><strong id="stat-average">—</strong><span class="stat-hint">across completed exams</span></div>
+      <div class="stat-card"><span class="stat-label">Best score</span><strong id="stat-best">—</strong><span class="stat-hint">your highest result</span></div>
+    </section>
+
+    <section id="resume-section" class="dashboard-section hidden">
+      <div class="section-heading">
+        <div><p class="eyebrow">Pick up where you left off</p><h2>Continue studying</h2></div>
+      </div>
+      <div id="resume-list"></div>
+    </section>
+
+    <section id="history-section" class="dashboard-section hidden">
+      <div class="section-heading">
+        <div><p class="eyebrow">Your recent activity</p><h2>Exam history</h2></div>
+        <span id="history-count" class="section-meta"></span>
+      </div>
+      <div id="history-list"></div>
+    </section>
+
+    <section id="all-exams-section" class="dashboard-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Build your confidence</p><h2>Practice exams</h2></div>
+      </div>
+      <div id="all-exams-list">Loading...</div>
+    </section>
+  </main>
+
+  <div id="pre-exam-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3 id="modal-exam-name" style="margin-bottom: 1.5rem;">Start Exam</h3>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="modal-shuffle"> Shuffle Questions
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="modal-timer" checked> Enable Timer
+        </label>
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap: 1rem; margin-top: 2rem;">
+        <button id="modal-cancel" class="secondary">Cancel</button>
+        <button id="modal-start">Start Exam</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/dashboard.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results | AWS Cert Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+  <header>
+    <div class="brand">AWS Cert Practice</div>
+  </header>
+
+  <main style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+    <div class="card" style="width: 100%; max-width: 500px; text-align: center; padding: 3rem 2rem;">
+      <h2 id="exam-name" style="margin-bottom: 0.5rem; color: var(--text-secondary);">Loading...</h2>
+      <h1 style="margin-bottom: 2rem;">Exam Complete!</h1>
+      
+      <div id="badge" style="display:inline-block; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: bold; font-size: 1.2rem; margin-bottom: 1.5rem;">
+        ...
+      </div>
+
+      <div style="font-size: 4rem; font-weight: bold; color: var(--salmon); line-height: 1;">
+        <span id="score-num">--</span> <span style="font-size: 1.5rem; color: var(--text-secondary);">/ <span id="total-num">--</span></span>
+      </div>
+      <div id="percentage" style="font-size: 1.25rem; font-weight: 500; margin-bottom: 2rem;">--%</div>
+
+      <div style="display:flex; justify-content:center; gap: 1rem; margin-top: 3rem;">
+        <button id="review-btn" class="secondary">Review Answers</button>
+        <button id="dash-btn">Back to Dashboard</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/results.js?v=3"></script>
+</body>
+</html>
+
